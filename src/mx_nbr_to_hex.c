@@ -1,6 +1,11 @@
 #include "../inc/libmx.h"
 
 char *mx_nbr_to_hex(unsigned long nbr) {
+    if ( nbr == 0 ) {
+        char *str = mx_strnew(1);
+        str = "0";
+        return str;
+    }
     long buf = nbr;
     int count = 0;
     while (buf != 0) {

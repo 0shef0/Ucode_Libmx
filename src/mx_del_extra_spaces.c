@@ -1,6 +1,6 @@
 #include "../inc/libmx.h"
 
-char *mx_del_extra_whitespaces(const char *str) {
+char *mx_del_extra_spaces(const char *str) {
     char *string = mx_strnew(mx_strlen(str));
     int count = 0;
     for ( int i = 0; i < mx_strlen(str); i++){
@@ -21,9 +21,3 @@ char *mx_del_extra_whitespaces(const char *str) {
 
     return result;
 }
-//
-//int main () {
-//    char str[] = "   jwudhkiwha \n dwkaj  \t dwad awd \r  dwad wad                ";
-//    mx_printstr(mx_del_extra_whitespaces(str));
-//    return 0;
-//}
